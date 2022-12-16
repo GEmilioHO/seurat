@@ -1378,8 +1378,7 @@ DESeq2DETest <- function(
   res <- DESeq2::results(
     object = dds1,
     contrast = c("group", "Group1", "Group2"),
-    alpha = 0.05,
-    ...
+    alpha = 0.05
   )
   to.return <- data.frame(p_val = res$pvalue, row.names = rownames(res))
   return(to.return)
